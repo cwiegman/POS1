@@ -1,0 +1,117 @@
+/* @override 
+	http://localhost:8888/css/print.css */
+
+
+body {
+  font-family:Arial;
+  background:#CCCCCC;
+}
+h3 { color:gray; 
+font: 1.2em 'Fjalla One';	
+
+
+}
+img {
+  border:0;
+  text-align: center;
+}
+
+#page {
+  margin:0 auto;
+  padding:15px;
+  width: 3in;
+  border: #grey 3px solid;
+  background: white;
+}
+
+#logo {
+  margin:auto;
+  text-align: center;
+}
+
+#transaction {
+	font-size: 0.8em;
+}
+#transaction td{
+	font: .9em 'Fjalla One';
+}
+#transaction_number {
+	font-size: 2em;
+	font-family: 'Raleway', sans-serif; 
+font-weight: 900;
+}
+#user {
+		font-size: 1.16 em;
+	font-family: 'Raleway', sans-serif; font-weight:900;
+
+}
+td p.time {
+	font: .9em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+
+table {
+  width:100%;
+  font-size: .7em;
+}
+
+td {
+	padding:5px;
+	font-family: Arial;
+	font-size: 1.1em;
+}
+hr {background: black;}
+
+.value,  { 
+	font-size: 1.16 em;
+	font-family: 'Raleway', sans-serif; font-weight:400;
+ }
+tr.odd {
+	background-color: #d9d9d9;
+}
+
+.center {text-align: center; margin: auto;
+
+}
+.border {
+	border-bottom: 1px solid black;
+}
+.total {
+	font-size: 2.4em;
+	font-family: 'Raleway', sans-serif; font-weight:200;
+	
+}
+.superscript {
+	font-size: 0.45em;
+	vertical-align: text-top;
+	font-weight:400;
+	position: relative;
+	top: 8px;
+
+}
+.small {
+	font-size: .65em;
+}
+.ty, #transaction {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1em;
+	font: 1.2em 'Fjalla One';
+	
+}
+.print_button {
+	margin: auto;
+	width: 300px;
+}
+
+
+@media print {
+	.dont-print-this-part {
+		display: none;
+	}
+	#page {border:none;}
+	
+	#navigation {
+		display: none;
+	}
+}
