@@ -1,0 +1,46 @@
+/* @override 
+	http://localhost:8888/css/style.css */
+body {
+	background-color: ccc;
+	font-size: 2 em;
+	font-family: "arial";
+}
+	
+.content {
+	width: 480px;
+	margin: 50px auto auto;
+	padding: 50px;
+	background-color: white;
+}
+
+.AccordionPanelTab {
+	font-size: .5em;
+	border-style: none;
+	border-color: white;
+	color: #777772;
+}
+
+.AccordionPanelOpen .AccordionPanelTab {
+	color: black;
+}
+
+input {
+	padding: 10px;
+		font-size: 1.6 em;
+	
+}
+
+#submit {
+	border-top:		2px solid #a3ceda;
+		border-left:		2px solid #a3ceda;
+		border-right:		2px solid #4f6267;
+		border-bottom:		2px solid #4f6267;
+		padding:		10px 20px !important;
+		font-size: 14px;
+		background-color: rgba(74, 98, 74, 0.25);
+		font-weight: bold;
+		color: teal;
+		width: 243px;
+		margin: 20px;
+	}
+	
