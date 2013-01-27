@@ -1,46 +1,330 @@
 /* @override 
 	http://localhost:8888/css/style.css */
-body {
-	background-color: ccc;
-	font-size: 2 em;
-	font-family: "arial";
-}
 	
-.content {
-	width: 480px;
-	margin: 50px auto auto;
-	padding: 50px;
-	background-color: white;
+	/* @group login */
+	
+	:focus {
+		border: none;
+	}
+	
+	body#login {
+		background-color: black;
+		margin: 14px;
+		font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	}
+	#login tr {
+		background-color: rgba(255, 255, 254, 0);
+	}
+	#error {
+				margin: auto auto 0;
+				font-weight: bold;
+				font-size: 13px;
+				text-shadow: 0 0 12px rgb(255, 255, 255);
+			}
+	#login label {
+		text-transform: uppercase;
+	}
+		#login div.content {
+			background: url(/Assets/Images/bg_login.jpg) left top;
+			width: 924px;
+			margin: auto;
+			padding: 50px;
+			height: 668px;
+			text-align: center;
+			border-radius: 4px;
+			border: 3px solid gray;
+		}
+		
+		#login div.content form {
+			padding: 131px;
+		}
+		
+		#submit {
+			display: none;
+		}
+		
+		#submit_btn {
+			background: url(/Assets/Images/button_login.jpg) left -1px;
+			width: 264px;
+			height: 88px;
+			color: rgba(255, 255, 254, 0);
+			margin: 20px;
+		}
+		#submit_btn:hover {
+		background: url(/Assets/Images/button_login.jpg) left -2px;
+		
+		}
+		
+		#submit_btn:active {
+		background: url(/Assets/Images/button_login.jpg) left 89px;
+		-moz-box-shadow: 0 0 21px rgba(254, 227, 156, 0.69);
+		-webkit-box-shadow: 0 0 21px rgba(254, 227, 156, 0.69);
+		box-shadow: 0 0 21px rgba(254, 227, 156, 0.69);
+	}
+		
+	#login input {
+		background-color: #cbcc99;
+		border-radius: 8px;
+		width: 290px;
+		height: 50px;
+		margin: 7px;
+		border-width: 1px;
+		border-color: #656608;
+		
+		box-shadow:
+		  #b0af6e
+		  1px 5px 13px
+		  3px /* spread */
+		  inset;
+		  color: #383838;
+		  font-size: 1em;
+		  padding-left: 21px;
+	  }
+	/* @end */
+		/* @group Page */
+	
+	body {
+		background-color: #777777;
+		font: bold 1.2em 'Fjalla One';
+	}
+		
+	.content {
+		width: 800px;
+		margin: 0px auto;
+		padding: 0 50px;
+	}
+	br {
+		display: none;
+	}
+	/* @end */
+	
+	
+	/* @group Accordian */
+.Accordion {border-bottom: none;
 }
-
 .AccordionPanelTab {
-	font-size: .5em;
-	border-style: none;
-	border-color: white;
-	color: #777772;
+	background-color: none;
+	color: navy;
+	border-bottom-style: none;
+	border-top: 1px none #686868;
+	display: block;
+	margin-right: 20px;
+	text-decoration: underline;
+	font-size: .75em;
+		
+/*	display: none; for live website*/
+	float: left;
 }
 
-.AccordionPanelOpen .AccordionPanelTab {
+.AccordionPanelOpen>.AccordionPanelTab {
 	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+	display: block;
+	float: none;
+	border-top: 2px solid black;
+	margin-top: 2.3em;
 }
+
+
+.AccordionPanelContent {
+	position: relative;
+	border-bottom: 2px solid black;
+}
+
+
+
+/* @end */
+
+
+
+/* @group TryBeforeYouBuy */
+input[type="radio"] {
+    display:none;
+}
+
+#tryBeforeYouBuy3 p {
+	width: 776px;
+	margin: auto;
+	height: 0;
+}
+
+label {
+	display: inline-block;
+	width: 388px;
+	height: 249px;
+	margin: auto;
+	background: url(/Assets/Images/Sprite-Map.jpg) -36px top;
+	top: 40px;
+	color: rgba(255, 255, 254, 0.07);
+	float: left;
+}
+input[type="radio"]:checked + label {
+		background-position: -460 -240; 
+}
+label.no {
+	right: 0;
+	top: 40px;
+	background-position: -460px top;
+}
+
 
 input {
 	padding: 10px;
-		font-size: 1.6 em;
+		font-size: 2em;
 	
 }
 
-#submit {
-	border-top:		2px solid #a3ceda;
-		border-left:		2px solid #a3ceda;
-		border-right:		2px solid #4f6267;
-		border-bottom:		2px solid #4f6267;
-		padding:		10px 20px !important;
-		font-size: 14px;
-		background-color: rgba(74, 98, 74, 0.25);
-		font-weight: bold;
-		color: teal;
-		width: 243px;
-		margin: 20px;
-	}
+#tryBeforeYouBuy3 p #TryBeforeYouBuy_1 {
+	left: 40px;
+}
+#tryBeforeYouBuy3 label {
+		color: rgba(255, 255, 254, 0.0);
 	
+}
+
+	
+	
+
+/* @end */
+
+/* @group HowManyShooters */
+
+#howManyShooters3 p {
+	width: 601px;
+	margin: auto;
+}
+
+.smbutton p label {
+	width: 200px;
+	height: 132px;
+	background-position: -1734px -5px;
+	text-align: center;
+	color: black;
+	text-shadow: 0 2px 0 rgb(255, 255, 255);
+	font-size: 1.2em;
+	display: inline-block;
+	line-height: 5.4em;
+}
+
+
+.smbutton input:checked + label {
+	background-position: -1734px -248px;
+	line-height: 6em;
+}
+
+
+
+
+.smbutton #AmmoCaliber3 p label.0 {
+	background: url(none) -1734px -55px;
+	color: #bd0000;
+}
+.AccordionPanel tr:nth-child(odd) {
+	background: grey;
+}
+.AccordionPanel th, .AccordionPanel td {
+	 alignment-baseline: right;
+	 text-align: left;
+	 padding-left: 50px;
+	 font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	 font-weight: normal;
+	 font-style: normal;
+ }
+/* @end */
+#navigation {
+	margin: 30px auto auto;
+	width: 760px;
+	b-ackground: black;
+	padding: 0;
+	border-top: 3px inset #808080;
+	background-image: -webkit-linear-gradient(90deg, #000 0%, #444 100%);
+}
+
+div.Salesmenu a{
+	margin: 9;
+	padding: 10px 20px;
+	display: inline-block;
+	color: black;
+	text-transform: uppercase;
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+.salesmenu a#print {	left: 90%;
+}
+
+.primarymenu a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 166px;
+	height: 94px;
+	margin: 3px 9px 6px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background: url(/Assets/Images/navbar.png) 23px 2px;
+	padding-top: 8px;
+	border-radius: 3px;
+	
+}
+
+#inventory {
+	background-position: -127px;;
+}
+#REPORT {
+	background-position: -300px;
+}
+
+ #LOGOUT {
+ 	background-position: -450px 10px;
+ }
+ 
+ .primarymenu a:hover,  .primarymenu a:active {
+ 	background-color: #444;
+ 	box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.53);
+	 opacity: 1;
+ } 
+ .primarymenu a:active{
+ 	box-shadow: inset 0 0 21px rgba(254, 227, 156, 0.69);
+ 	
+ 	
+ }
+ 
+ .smbutton label.no {
+ 	background-position: -1950px -02 !important; 
+ }
+ .smbutton input[type="radio"]:checked + label.no {
+ 	background-position: -1950px  -246 !important; 
+ 	line-height: 6em;
+ 	text-shadow: 0 0 24px #fefe0d;
+ 	
+ 	
+ }
+ 
+ #Transaction_ReceiptPreview {
+ 	width: 700px;
+	 margin: auto;  
+	 }
+	 
+	  #Transaction_ReceiptPreview td{
+	  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	  	
+	 color: black;
+ }
+ #Transaction_ReceiptPreview td table td{
+ 	  	
+ 	 color: black;
+ }
+ 
+ #transaction #sale, #store #inventory, #bookkepping #report {
+ 	red;
+	  	box-shadow: inset 0 0 12px rgb(0, 0, 0);
+		  background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0) 100%), url(/Assets/Images/navbar.png) 21px -4px #53623b;
+		  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.24)), to(rgba(0, 0, 0, 0))), url(/Assets/Images/navbar.png) 21px -4px #53623b;
+	  }
+
+/* @group transitions */
+/* @end */
