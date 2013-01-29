@@ -106,7 +106,7 @@ tr.odd {
 
 
 @media print {
-	.dont-print-this-part {
+	.dont-print {
 		display: none;
 	}
 	#page {border:none;}

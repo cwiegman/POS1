@@ -1,9 +1,10 @@
 <div id="navigation">
-    <div class="Salesmenu"><a href="#" id="cancel">Cancel</a><a href="#" id="print">Print</a></div>
+    <div class="Salesmenu"><a href="TransactionBegin.php" id="cancel">Cancel</a></div>
     <div class="primarymenu">
  <a href="#" id="SALE">SALE</a>
- <a href="#" id="inventory">inventory</a>
- <a href="#" id="REPORT">REPORT</a>
- <a href="#" id="LOGOUT">LOGOUT</a>
+ <a href="inventory.php" id="inventory">inventory</a>
+ <a href="report.php" id="REPORT">REPORT</a>
+ <a href="AdminLogin.php" id="LOGOUT">LOGOUT</a>
     </div>
 </div>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>

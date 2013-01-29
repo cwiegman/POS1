@@ -444,7 +444,7 @@ Spry.Widget.Accordion.PanelAnimator = function(accordion, panel, opts)
 	this.interval = 0;
 
 	this.fps = 60;
-	this.duration = 500;
+	this.duration = 50;
 	this.startTime = 0;
 
 	this.transition = Spry.Widget.Accordion.PanelAnimator.defaultTransition;

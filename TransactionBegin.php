@@ -1,13 +1,18 @@
 <!--header includes css file / css selectors added to the html-->
-<link rel="stylesheet" type="text/css" href="css/style.css" >
+<link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
 <body id="transaction">
 <div class="content">
 
 <?php
 session_start();
-if(isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']== "true") { 
+
+if(1==1) { 
+
+//if(isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']== "true") { 
 require_once ("config.php");
 ?>
 <script type="text/javascript">
@@ -192,7 +197,7 @@ function CheckCompletion() {
 			AmmoTypeCost = <?php echo $Ammo_22LR;?>
 			
 		}
-		if(AmmoType == '40 SW') {
+		if(AmmoType == '40 S&amp;W') {
 			AmmoTypeCost = <?php echo $Ammo_SW;?>
 		}
 		if(AmmoType == '45 ACP') {
@@ -241,243 +246,211 @@ function CheckCompletion() {
   <div class="AccordionPanel" id="tryBeforeYouBuy1">
     <div class="AccordionPanelTab" id="tryBeforeYouBuy2">Is this Try Before You Buy?</div>
     <div class="AccordionPanelContent" id="tryBeforeYouBuy3">
-      <p>
-        <label>
-          <input type="radio" name="Try Before You Buy" value="Yes" id="TryBeforeYouBuy_0" onClick="checkForTryBeforeYouBuy();">
-          Yes</label>
+      <p>          <input type="radio" name="Try Before You Buy" value="Yes" id="TryBeforeYouBuy_0" onClick="checkForTryBeforeYouBuy();">
+              <label class="yes" for="TryBeforeYouBuy_0">Yes</label>
         <br>
-        <label>
+
           <input type="radio" name="Try Before You Buy" value="No" id="TryBeforeYouBuy_1" onClick="checkForTryBeforeYouBuy();">
-          No</label>
+            <label for="TryBeforeYouBuy_1" class="no"> No</label>
         <br>
       </p>
     </div>
   </div>
-  <div class="AccordionPanel" id="howManyShooters1">
-    <div class="AccordionPanelTab" id="howManyShooters2">How Many Shooters</div>
+  <div class="AccordionPanel smbutton" id="howManyShooters1">
+    <div class="AccordionPanelTab" id="howManyShooters2">How Many Shooters?</div>
     <div class="AccordionPanelContent" id="howManyShooters3">
       <p>
-        <label>
-          <input type="radio" name="How Many Shooters" value="1" id="HowManyShooters_0"  onClick="checkForNoOfShooters();">
-          One</label>
+          <input type="radio" name="How Many Shooters" value="1" id="HowManyShooters_0"  onClick="checkForNoOfShooters();">          
+        <label class="1" for="HowManyShooters_0">One</label>
         <br>
-        <label>
+     
           <input type="radio" name="How Many Shooters" value="2" id="HowManyShooters_1" onClick="checkForNoOfShooters();">
-          Two</label>
+          <label class="2" for="HowManyShooters_1">Two</label>
         <br>
-        <label>
+        
           <input type="radio" name="How Many Shooters" value="3" id="HowManyShooters_2" onClick="checkForNoOfShooters();">
-          Three</label>
+          <label class="3" for="HowManyShooters_2">Three</label>
         <br>
       </p>
     </div>
  
 </div>
 
-<div class="AccordionPanel" id="howLongDidCustomerShoot1">
-    <div class="AccordionPanelTab" id="howLongDidCustomerShoot2">How Long Did Customer Shoot</div>
+<div class="AccordionPanel smbutton" id="howLongDidCustomerShoot1">
+    <div class="AccordionPanelTab" id="howLongDidCustomerShoot2">How Long Did Customer Shoot?</div>
     <div class="AccordionPanelContent" id="howLongDidCustomerShoot3">
    
      
       <p>
-        How Long Did Customer Shoot?<br/>
-          <label>
+        
             <input type="radio" name="How Long Did The Customer Shoot?" value="30" id="HowLongDidTheCustomerShoot_0" onClick="checkForHowLong();">
-            30 min</label>
+            <label class="1" for="HowLongDidTheCustomerShoot_0">30 min</label>
           <br>
-          <label>
+        
             <input type="radio" name="How Long Did The Customer Shoot?" value="60" id="HowLongDidTheCustomerShoot_1" onClick="checkForHowLong();">
-            1 hr</label>
+            <label class="2" for="HowLongDidTheCustomerShoot_1">1 hr</label>
           <br>
-          <label>
+          
             <input type="radio" name="How Long Did The Customer Shoot?" value="90" id="HowLongDidTheCustomerShoot_2" onClick="checkForHowLong();">
-            1.5 hr</label>
+            <label class="3" for="HowLongDidTheCustomerShoot_2">1.5 hr</label>
           <br>
-          <label>
+
             <input type="radio" name="How Long Did The Customer Shoot?" value="120" id="HowLongDidTheCustomerShoot_3" onClick="checkForHowLong();">
-            2 hr</label>
+            <label class="4" for="HowLongDidTheCustomerShoot_3">2 hr</label>
           <br>         
       </p>
       
 </div>
     </div>
     
-<div class="AccordionPanel" id="EyeEarProtectionRent1">
+<div class="AccordionPanel smbutton" id="EyeEarProtectionRent1">
     <div class="AccordionPanelTab" id="EyeEarProtectionRent2">Did Customer Rent Eye Ear Protection?</div>
     <div class="AccordionPanelContent" id="EyeEarProtectionRent3"> <p>
-        <label>
+       
           <input type="radio" name="How Many Shooters" value="0" id="EarEyeProtection_0"  onClick="checkEarEyeProtection();">
-          None</label>
+          <label class="no" for="EarEyeProtection_0"> None</label>
         <br>
-        <label>
           <input type="radio" name="How Many Shooters" value="1" id="EarEyeProtection_1" onClick="checkEarEyeProtection();">
-          One Person</label>
+        <label class="2" for="EarEyeProtection_1">One Person</label>
         <br>
-        <label>
           <input type="radio" name="How Many Shooters" value="2" id="EarEyeProtection_2" onClick="checkEarEyeProtection();">
-          Two Persons</label>
+        <label class="3" for="EarEyeProtection_2">Two Persons</label>
         <br>
-        <label>
           <input type="radio" name="How Many Shooters" value="3" id="EarEyeProtection_3" onClick="checkEarEyeProtection();">
-          Three Persons</label>
+        <label class="4" for="EarEyeProtection_3">Three Persons</label>
         <br>
 </p></div>
     </div>
     
     
-      <div class="AccordionPanel" id="AmmoCaliber1">
+      <div class="AccordionPanel smbutton" id="AmmoCaliber1">
     <div class="AccordionPanelTab" id="AmmoCaliber2">Ammo Caliber</div>
     <div class="AccordionPanelContent" id="AmmoCaliber3">
       <p>
-        <label>
           <input type="radio" name="Ammo Caliber" value="22" id="AmmoCaliber_0" onClick="checkForAmmoType();">
-        22 LR</label>
+               <label class="1" for="AmmoCaliber_0">22 LR</label>
         <br>
-        <label>
           <input type="radio" name="Ammo Caliber" value="25" id="AmmoCaliber_1" onClick="checkForAmmoType();">
-          40 SW
-        </label>
+          <label class="2" for="AmmoCaliber_1">40 S&amp;W</label>
         <br>
-        <label>
           <input type="radio" name="Ammo Caliber" value="32" id="AmmoCaliber_2" onClick="checkForAmmoType();">
-        45 ACP</label>
+              <label class="3" for="AmmoCaliber_2">45 ACP</label>
         <br>
-        <label>
           <input type="radio" name="Ammo Caliber" value="38" id="AmmoCaliber_3" onClick="checkForAmmoType();">
-        9 mm</label>
+             <label class="4" for="AmmoCaliber_3">9 mm</label>
         <br>
-        <label>
+        
           <input type="radio" name="Ammo Caliber" value="0" id="AmmoCaliber_4" onClick="checkForAmmoType();">
-          No Ammo</label>
+          <label class="no" for="AmmoCaliber_4">No Ammo</label>
         <br>
        
       </p>
     </div>
     </div>
     
-    <div class="AccordionPanel" id="AmmoBoxes1">
+    <div class="AccordionPanel smbutton" id="AmmoBoxes1">
     <div class="AccordionPanelTab" id="AmmoBoxes2">Ammo Boxes</div>
     <div class="AccordionPanelContent" id="AmmoBoxes3">
       <p>
-        <label>
           <input type="radio" name="AmmoBoxes" value="1" id="AmmoBoxes_0" onClick="checkForAmmoQty()">
-          1</label>
+         <label class="1" for="AmmoBoxes_0"> 1</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="2" id="AmmoBoxes_1" onClick="checkForAmmoQty()">
-          2</label>
+                  <label class="2" for="AmmoBoxes_1">2</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="3" id="AmmoBoxes_2" onClick="checkForAmmoQty()">
-          3</label>
+         <label class="3" for="AmmoBoxes_2"> 3</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="4" id="AmmoBoxes_3" onClick="checkForAmmoQty()">
-          4</label>
+                  <label class="4" for="AmmoBoxes_3">4</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="5" id="AmmoBoxes_4" onClick="checkForAmmoQty()">
-          5</label>
+            <label class="5" for="AmmoBoxes_5">5</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="6" id="AmmoBoxes_5" onClick="checkForAmmoQty()">
-          6</label>
+           <label class="6" for="AmmoBoxes_5">6</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="7" id="AmmoBoxes_6" onClick="checkForAmmoQty()">
-          7</label>
+          <label class="7" for="AmmoBoxes_6">7</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="8" id="AmmoBoxes_7" onClick="checkForAmmoQty()">
-          8</label>
+         <label class="8" for="AmmoBoxes_7"> 8</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="9" id="AmmoBoxes_8" onClick="checkForAmmoQty()">
-          9</label>
+         <label class="9" for="AmmoBoxes_8"> 9</label>
         <br>
-        <label>
           <input type="radio" name="AmmoBoxes" value="0" id="AmmoBoxes_9" onClick="checkForAmmoQty()">
-        None</label>
+                <label for="AmmoBoxes_9" class="no">None</label>
         <br>
       </p>
     </div>
     </div>
-    <div class="AccordionPanel" id="TargetType1">
+    <div class="AccordionPanel smbutton" id="TargetType1">
 <div class="AccordionPanelTab" id="TargetType2">Type of Targets?</div>
 <div class="AccordionPanelContent" id="TargetType3">
 <p>
- <label>
           <input type="radio" name="TargetType" value="Small" id="TargetType_0" onClick="checkForTargetType()">
-        Small</label>
+         <label for="TargetType_0" class="1" >Small</label>
         <br>
-        <label>
+   
           <input type="radio" name="TargetType" value="Standard" id="TargetType_1" onClick="checkForTargetType()">
-         Standard</label>
+           <label for="TargetType_1">Standard</label>
         <br>
-        <label>
+    
           <input type="radio" name="TargetType" value="Premium" id="TargetType_2" onClick="checkForTargetType()">
-          Premium</label>
+           <label for="TargetType_2" class="2">Premium</label>
           <br>
-          <label>
+          
           <input type="radio" name="TargetType" value="None" id="TargetType_3" onClick="checkForTargetType()">
-          None</label>
+          <label for="TargetType_3" class="no">None</label>
           </p>
 
 </div>
 </div>
-     <div class="AccordionPanel" id="HowManyTargets1">
-    <div class="AccordionPanelTab" id="HowManyTargets2">How Many Targets?</div>
-<div class="AccordionPanelContent" id="HowManyTargets3">How May Targets did Customer Buy? <br/>
+     <div class="AccordionPanel smbutton" id="HowManyTargets1">
+    <div class="AccordionPanelTab" id="HowManyTargets2">How Many Targets did the Customer Buy?</div>
+<div class="AccordionPanelContent" id="HowManyTargets3">
   <p>
-        <label>
           <input type="radio" name="Targets" value="1" id="Targets_0" onClick="checkTargetsQty()">
-          1</label>
+          <label for="Targets_0">1</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="2" id="Targets_1" onClick="checkTargetsQty()">
-          2</label>
+           <label for="Targets_1">2</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="3" id="Targets_2" onClick="checkTargetsQty()">
-          3</label>
+          <label for="Targets_2">3</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="4" id="Targets_3" onClick="checkTargetsQty()">
-          4</label>
+          <label for="Targets_3">4</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="5" id="Targets_4" onClick="checkTargetsQty()">
-          5</label>
+          <label for="Targets_4">5</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="6" id="Targets_5" onClick="checkTargetsQty()">
-          6</label>
+           <label for="Targets_5">6</label>
         <br>
-        <label>
+       
           <input type="radio" name="Targets" value="7" id="Targets_6" onClick="checkTargetsQty()">
-          7</label>
+           <label for="Targets_6">7</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="8" id="Targets_7" onClick="checkTargetsQty()">
-          8</label>
+           <label for="Targets_7">8</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="9" id="Targets_8" onClick="checkTargetsQty()">
-          9</label>
+                 <label for="Targets_8"> 9</label>
         <br>
-        <label>
           <input type="radio" name="Targets" value="0" id="Targets_9" onClick="checkTargetsQty()">
-          None</label>
+                  <label for="Targets_9" class="no">None</label>
         <br>
   </p>
 </div>
 </div>
-<div class="AccordionPanel" id="FinalReciept">
-    <div class="AccordionPanelTab" id="RecieptValues">Reciept Values</div>
+<div class="AccordionPanel smbutton" id="FinalReciept">
+    <div class="AccordionPanelTab" id="RecieptValues">Receipt Values</div>
 <div class="AccordionPanelContent" id="RecieptValues_table">
-<center><table border="1" width="100%">
+<center><table border="0" width="100%">
 
-<tr>
+<tr class="invert">
 <th>
 Item
 </th>
@@ -604,7 +577,7 @@ Grand Total
 </tr>
 
 <tr>
-<th>
+<th class="invert">
 <input type="button" value="check for completion" onClick="CheckCompletion()">
 </th>
 <td>
@@ -625,9 +598,7 @@ echo "You are not allowed to access this resource. Please Login.<br>" ?>
 <?php
 }
 ?>
-</div>
-</body>
-</form>
+</div><?php include 'Assets/navigation.php'; ?>
 
 <script type="text/javascript">
 function post_to_url() {
@@ -679,3 +650,4 @@ function post_to_url() {
     form.submit();
 }
 </script>
+</body>

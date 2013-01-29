@@ -21,35 +21,36 @@ if(isset($adminFormValues['hiddenField_admin']) && $adminFormValues['hiddenField
 		$_SESSION['admin_logged'] = true;
 	}
 	else {
-		$login_error = "Either Password or ID is wrong please check";
+		$login_error = "<p id='error'>Either Password or ID is wrong, please check</p>";
 	}
 }
 if(!isset($_SESSION['admin_logged'])) {
 ?>
-<form action="AdminLogin.php" method="post" name="AdminForm">
-<table>
-<tr>
-<td>
-Login</td><td><input name="LoginID" id="LoginID" type="text" size="20" maxlength="10"></td>
-</tr>
-<tr>
-<td>
-Password</td><td><input name="Password" id="Password" type="password" size="20" maxlength="10"></td></tr>
-<tr>
-<td>
-</td><td><input id="submit" name="submit" type="submit" maxlength="10"></td></tr>
-<tr>
-<td>
-<?php  ?>
-</td><?php if(isset($login_error))echo $login_error; ?></td></tr>
-</table>
-<input type="hidden" id="hiddenField_admin" name="hiddenField_admin" value="true"></form>
-<?php
+  <form action="AdminLogin.php" method="post" name="AdminForm">
+    <table width="434" align="center">
+      <tr>
+        <td align="center"><input name="LoginID" type="text" id="LoginID" value="STAFF ID" size="20" maxlength="10" onFocus="select()"></td>
+      </tr>
+      <tr>
+        <td align="center"><input name="Password" type="password" id="Password" value="PASSWORD" size="20" maxlength="10" onFocus="select()"></td>
+      </tr>
+      <tr>
+        <td align="center"><input id="submit" name="submit" type="submit" maxlength="10">
+        <label for="submit" id="submit_btn">submit</label></td>
+      </tr>
+      <tr>
+        <td>  </td>      </td>
+        <?php if(isset($login_error))echo $login_error; ?>
+      </tr>
+    </table>
+    <input type="hidden" id="hiddenField_admin" name="hiddenField_admin" value="true">
+  </form>
+  <?php
 }
 else {?>
-<a href="TransactionBegin.php">Start Transaction</a><br/>
-<a href="AdminLogin.php?do=logout">Logout</a>
-<?php	
+  <a href="TransactionBegin.php">Start Transaction</a><br/>
+  <a href="AdminLogin.php?do=logout">Logout</a>
+  <?php	
 }
 ?>
 

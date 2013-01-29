@@ -1,25 +1,30 @@
-<head><link href="css/print.css" rel="stylesheet" type="text/css">
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+<link href="css/print.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,900' rel='stylesheet' type='text/css'>
 
 
+<!-- depreciated via print.css
+
 <script type="javascript/text">
 function printReceipt() {
  alert( "DoInit 1" );
-element = document.getElementById('dont-print-this-part');
+element = document.getElementById('dont-print');
 element.style.display = 'none';
-}
+}-->
 
 </script>
 <title>Point Of Sale  |  Multimedia By Chris  |  Jims' Shooting Range
 </title>
 </head>
+<body>
 <?php
 
 
 //var_dump($_REQUEST);
 ?>
-<div class="dont-print-this-part">
+<div class="dont-print">
   <h3>
     <center>
       Point of Sale Receipt
@@ -110,6 +115,6 @@ else {?>
 
 
 </div>
-<A HREF="javascript:window.print()">
-
-<IMG SRC="Assets/Images/print_btn.jpg" BORDER="0" /></A>
+<A HREF="javascript:window.print()" id="print">Print</a></A>
+<?php include 'Assets/navigation.php'; ?>
+</body>

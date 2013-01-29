@@ -48,7 +48,7 @@
 			width: 264px;
 			height: 88px;
 			color: rgba(255, 255, 254, 0);
-			margin: 20px;
+			margin: 20px 80px;
 		}
 		#submit_btn:hover {
 		background: url(/Assets/Images/button_login.jpg) left -2px;
@@ -109,13 +109,25 @@
 	border-top: 1px none #686868;
 	display: block;
 	margin-right: 20px;
-	text-decoration: underline;
 	font-size: .75em;
 		
 /*	display: none; for live website*/
 	float: left;
 }
+.AccordionPanelClosed .AccordionPanelTab {
+border-style: none;
+text-decoration: underline;
+font-weight: normal;
+font-style: normal;
+background-color: rgba(192, 192, 192, 0.6);
+padding: 4px 15px;
+margin: 3px 5px;
+border-radius: 6;
+}
 
+.AccordionPanelClosed:nth-child(even) .AccordionPanelTab {
+background-color: rgba(163, 163, 163, 0.41);
+}
 .AccordionPanelOpen>.AccordionPanelTab {
 	color: black;
 	font-weight: bold;
@@ -242,7 +254,7 @@ input {
 	background-image: -webkit-linear-gradient(90deg, #000 0%, #444 100%);
 }
 
-div.Salesmenu a{
+div.Salesmenu a, a#print {
 	margin: 9;
 	padding: 10px 20px;
 	display: inline-block;
@@ -252,7 +264,7 @@ div.Salesmenu a{
 	top: 40px;
 	left: 0;
 }
-.salesmenu a#print {	left: 90%;
+a#print {	left: 90%;
 }
 
 .primarymenu a {
@@ -271,8 +283,12 @@ div.Salesmenu a{
 	
 }
 
-#inventory {
-	background-position: -127px;;
+#inventory_data {
+	margin: auto;
+	width: 600px;
+	text-align: center;
+	background: -127px white;
+	padding: 20px;
 }
 #REPORT {
 	background-position: -300px;
