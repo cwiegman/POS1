@@ -254,7 +254,7 @@ input {
 	background-image: -webkit-linear-gradient(90deg, #000 0%, #444 100%);
 }
 
-div.Salesmenu a, a#print {
+div.Salesmenu a, #print a {
 	margin: 9;
 	padding: 10px 20px;
 	display: inline-block;
@@ -264,7 +264,7 @@ div.Salesmenu a, a#print {
 	top: 40px;
 	left: 0;
 }
-a#print {	left: 90%;
+#print a {	left: 90%;
 }
 
 .primarymenu a {
@@ -282,12 +282,15 @@ a#print {	left: 90%;
 	border-radius: 3px;
 	
 }
-
+#inventory {
+	background-position: -127px 4px;
+	
+}
 #inventory_data {
 	margin: auto;
 	width: 600px;
 	text-align: center;
-	background: -127px white;
+	background:white;
 	padding: 20px;
 }
 #REPORT {
@@ -341,6 +344,12 @@ a#print {	left: 90%;
 		  background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0) 100%), url(/Assets/Images/navbar.png) 21px -4px #53623b;
 		  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.24)), to(rgba(0, 0, 0, 0))), url(/Assets/Images/navbar.png) 21px -4px #53623b;
 	  }
-
+ #store #inventory {
+ 	background-position: -127px 1px;
+ }
+ #bookkepping #REPORT {
+ 	
+ 	background-position: -300px;
+ }
 /* @group transitions */
 /* @end */

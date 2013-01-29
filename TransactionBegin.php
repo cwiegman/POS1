@@ -9,6 +9,7 @@
 
 <?php
 session_start();
+$page_id = "sale";
 
 if(1==1) { 
 
@@ -22,7 +23,7 @@ if(document.getElementById('TryBeforeYouBuy_0').checked) {
  //alert("Show transaction finished button and go to print receipt");
  window.location.replace("printReceipt.php?getReciept=TBYB");
 }else if(document.getElementById('TryBeforeYouBuy_1').checked) {
-  
+ ifwindow.location.replace("printReceipt.php?getReciept=TBYB");
 }
 }
 

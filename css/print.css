@@ -111,7 +111,7 @@ tr.odd {
 	}
 	#page {border:none;}
 	
-	#navigation {
+	#navigation, #print {
 		display: none;
 	}
 }
