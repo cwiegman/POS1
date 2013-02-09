@@ -603,7 +603,7 @@ echo "You are not allowed to access this resource. Please Login.<br>" ?>
 
 <script type="text/javascript">
 function post_to_url() {
-	alert("test");
+	
 	params = new Array();
 	params['noOfShooters_reciept'] = document.getElementById('noOfShooters_reciept').innerHTML;
 	

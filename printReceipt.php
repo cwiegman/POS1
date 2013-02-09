@@ -20,7 +20,35 @@ element.style.display = 'none';
 </head>
 <body>
 <?php
+require_once("Connections/local.php");
 
+$local = $GLOBALS['local'];
+		if(!$local) {
+			
+		}
+		else {
+			
+			if(isset($_POST['AmmoType_receipt']) && isset($_POST['AmmoQty_receipt'])) {
+			$ammo_type = $_POST['AmmoType_receipt'];
+			$ammo_qty = $_POST['AmmoQty_receipt'];
+			$target_type = $_POST['TargetType_receipt'];
+			$target_qty = $_POST['TargetsQty_receipt'];
+		
+		
+			mysql_select_db($database_local, $local);
+			$sql1 = "UPDATE inventory SET inventory_units=inventory_units-$ammo_qty
+WHERE Item_cd='".$ammo_type ."'";
+
+			$result1 = mysql_query( $sql1 );
+			
+			$sql2 = "UPDATE inventory SET inventory_units=inventory_units-$target_qty
+WHERE Item_cd='".$target_type ."'";
+
+			$result2 = mysql_query( $sql2 );
+
+			
+			}
+		}
 
 //var_dump($_REQUEST);
 ?>
